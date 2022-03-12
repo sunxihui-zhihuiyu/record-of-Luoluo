@@ -12,12 +12,38 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '',
-      repo: '',
-      coverpage: true
+      // 文档标题
+      name: '洛洛的成长记录',
+      repo: '洛洛',
+      coverpage: true,
+      loadNavbar: true,
+      loadSidebar: true,
+      subMaxLevel:2,
+      topMargin:25,
+      //搜索框
+      search: {
+        paths: 'auto',
+        placeholder: '🔍 搜索',
+        noData: '😒 找不到结果',
+       // Headline depth, 1 - 6
+        depth: 6,
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      },
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 全局搜索 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 图片放大 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!--使用 Gitter 实现一个 IM 即时通讯聊天室功能-->
+  <script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'zxiaosi/blogshare'
+  };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+  
 </body>
 </html>
